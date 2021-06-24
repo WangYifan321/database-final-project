@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>login</title>
+    <style>
+        body{
+            background-color: antiquewhite;
+        }
+        p{
+            text-align: center;
+            margin-top: 100px;
+            font-size: xx-large;
+            font-weight: bolder;
+        }
+        #login1{
+            font-size: x-large;
+            background-color: antiquewhite;
+            text-align: center;
+            width: 20%;
+            height: 400px;
+            margin-left: 45%;
+            margin-top: 100px;
+        }
+        input{
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            box-sizing: border-box;
+            border: 2px solid red;
+            border-radius: 4px;
+        }
+        #list{
+            float: left;
+            margin-left: 35%;
+            background-color: antiquewhite;
+            height: 400px;
+            width: 9%;
+            margin-top: 90px;
+        }
+        a{
+            text-decoration: none;
+            color: #333333;
+            display: block;
+            font-size: x-large;
+            font-weight: bolder;
+            padding: 12px 16px;
+        }
+        .a:hover{
+            color: brown;
+        }
+    </style>
+    <script>
+        function fun() {
+
+
+            let user1 = document.forms["vip_login"]["user1"].value;
+            let password1 = document.forms["vip_login"]["password1"].value;
+            if (user1 && password1) {
+                return true;
+            }else{
+                alert("用户名、密码都不能为空");
+                return false;
+            }
+        }
+
+
+    </script>
+</head>
+<body>
+   <p>网上书店销售系统</p>
+   <div id="list">
+       <a href="login.html" class="a">会员登陆&nbsp;:</a><br>
+       <a href="zhuce.html" class="a">会员注册</a><br>
+       <a href="admin_login.html" class="a">管理员登录</a>
+
+   </div>
+   <div id="login1">
+  <form action="login1" name="vip_login"onsubmit=" return fun()">
+      <br>
+      <input type="text" name="user1" placeholder="请输入用户名:"><br>
+      <input type="password" name="password1" placeholder="请输入密码:"><br>
+      <input type="submit" value="登录">
+  </form>
+
+     </div>
+</body>
+</html>

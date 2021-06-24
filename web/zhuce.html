@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>login</title>
+    <style>
+        body{
+            background-color: antiquewhite;
+        }
+        p{
+            text-align: center;
+            margin-top: 100px;
+            font-size: xx-large;
+            font-weight: bolder;
+        }
+        #login1{
+            font-size: x-large;
+            background-color: antiquewhite;
+            text-align: center;
+            width: 20%;
+            height: 400px;
+            margin-left: 45%;
+            margin-top: 100px;
+        }
+        input{
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            box-sizing: border-box;
+            border: 2px solid red;
+            border-radius: 4px;
+        }
+        #list{
+            float: left;
+            margin-left: 35%;
+            background-color: antiquewhite;
+            height: 400px;
+            width: 9%;
+            margin-top: 90px;
+        }
+        a{
+            text-decoration: none;
+            color: #333333;
+            display: block;
+            font-size: x-large;
+            font-weight: bolder;
+            padding: 12px 16px;
+        }
+        .a:hover{
+            color: brown;
+        }
+    </style>
+    <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+    <script>
+        function fun() {
+            let user = document.getElementById("user").value;
+            let user1 = document.getElementById("user1").value;
+            let password1 = document.getElementById("password1").value;
+            let sex = document.getElementById("sex").value;
+            let address = document.getElementById("address").value;
+            let phone = document.getElementById("phone").value;
+            let personid = document.getElementById("personid").value;
+
+            if(user == null || user=='' || user1 == null || user1=='' || password1 =='' || sex == '' || address == '' || phone == '' || personid == ''){
+               alert("请补全信息再提交！")
+               return false;
+           }else{
+                if(sex == '男' || sex=='女')
+               return true;
+                else{
+                    alert("请您输入正确的性别！");
+                    return false;
+                }
+           }
+        }
+    </script>
+</head>
+<body>
+<p>网上书店销售系统</p>
+<div id="list">
+    <a href="zhuce.html" class="a">会员注册&nbsp;:</a><br>
+
+    <a href="admin_login.html" class="a">管理员登录</a><br>
+    <a href="login.html" class="a">会员登陆</a><br>
+
+</div>
+<div id="login1">
+    <form action="login3" name="vip_login" onsubmit="return fun()">
+        <br>
+        <input type="text" id="user" name="user" placeholder="请输入您的姓名:"><br>
+
+        <input type="text" id="user1" name="user1" placeholder="请输入用户名:"><br>
+        <input type="password" id="password1" name="password1" placeholder="请输入密码:"><br>
+        <input type="text" id="sex" name="sex" placeholder="请输入性别(男或女):"><br>
+        <input type="text" id="address" name="address" placeholder="请输入您的地址:"><br>
+        <input type="text" id="phone" name="phone" placeholder="请输入手机号:"><br>
+        <input type="text" id="personid" name="personid" placeholder="请输入身份证号:"><br>
+        <input type="submit" value="注册">
+    </form>
+
+</div>
+</body>
+</html>
